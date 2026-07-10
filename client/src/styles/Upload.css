@@ -1,0 +1,104 @@
+/* =============================================
+   UPLOAD PAGE
+   ============================================= */
+.upload-page {
+  padding-top: 100px;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+.upload-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.upload-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+}
+
+.upload-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.upload-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Steps indicator */
+.upload-steps {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+
+.upload-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.upload-step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  border: 2px solid var(--border-default);
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+}
+
+.upload-step.active .upload-step-number {
+  background: var(--gradient-primary);
+  border-color: var(--accent-primary);
+  color: white;
+  box-shadow: 0 0 20px rgba(79, 143, 255, 0.3);
+}
+
+.upload-step.completed .upload-step-number {
+  background: var(--accent-success);
+  border-color: var(--accent-success);
+  color: white;
+}
+
+.upload-step-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.upload-step.active .upload-step-label {
+  color: var(--text-primary);
+}
+
+.upload-step-connector {
+  width: 60px;
+  height: 2px;
+  background: var(--border-default);
+  margin: 0 0.5rem;
+  align-self: center;
+}
+
+.upload-step.completed + .upload-step-connector,
+.upload-step.completed ~ .upload-step-connector {
+  background: var(--accent-success);
+}
+
+/* Analyze button area */
+.upload-analyze-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.upload-analyze-section .btn {
+  min-width: 250px;
+}
